@@ -8,21 +8,25 @@ export default makeStyles((theme) => ({
             fontWeight: '600',
             color: theme.palette.primary.main,
             backgroundColor: theme.palette.primary.contrastText,
-            height:'10px',
-            padding: "0px"
+            textAlign: "center",
+            verticalAlign: 'top'
+            // height:'20px',
+            // padding: "0px"
         },
         '& tbody td': {
             fontWeight: '300',
             fontSize: 12,
-            height:'10px',
-            padding: "0px"
+            textAlign: "center",
+            verticalAlign: 'top'
+            // height:'20px',
+            // padding: "0px"
         },
         '& tbody tr:hover': {
             backgroundColor: '#CEE3F6',
             cursor: 'pointer',
         },
         // '& tbody tr': {
-        //     height: "10px", 
+        //     height: "20px", 
         //     padding: "0px"
         // },
     },
