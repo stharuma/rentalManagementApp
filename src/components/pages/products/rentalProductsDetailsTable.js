@@ -33,14 +33,14 @@ const headCells = [
 
 const RentalProductsDetailsTable = ({ records }) => {
   const classes = useStyles();
-  const { TblContainer, TblHead } = UseTable(headCells, records);
+  const { TblContainer, TblHead, TblPagination, recordsAfterPaging } = UseTable(headCells, records);
 
   return (
     <>
       <TblContainer>
         <TblHead />
         <TableBody>
-          {records.map((record) => (
+          {recordsAfterPaging().map((record) => (
             <TableRow key={record.id}>
               <TableCell>{record.id}</TableCell>
               <TableCell>{record.name}</TableCell>
@@ -53,6 +53,7 @@ const RentalProductsDetailsTable = ({ records }) => {
           ))}
         </TableBody>
       </TblContainer>
+      {records.length > 5 && <TblPagination />}
     </>
   );
 };
