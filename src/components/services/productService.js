@@ -7,7 +7,7 @@ import React from 'react'
 
 export const getRentalProductData = () => ([
   {
-    "id":"1",
+    "id":1,
     "code":"p1",
     "name":"Air Compressor 12 GAS",
     "type":"plain",
@@ -20,7 +20,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":1
   },
   {
-    "id":"2",
+    "id":2,
     "code":"p2",
     "name":"Air Compressor 5 Electric",
     "type":"plain",
@@ -33,7 +33,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":1
   },
   {
-    "id":"3",
+    "id":3,
     "code":"p3",
     "name":"Dia Blade 14 inch",
     "type":"plain",
@@ -46,7 +46,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"4",
+    "id":4,
     "code":"p4",
     "name":"Copper Blade 5 inch",
     "type":"plain",
@@ -59,7 +59,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"5",
+    "id":5,
     "code":"p5",
     "name":"Copper Blade 5 inch",
     "type":"plain",
@@ -72,7 +72,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"6",
+    "id":6,
     "code":"p6",
     "name":"Copper Blade 8 inch",
     "type":"plain",
@@ -85,7 +85,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"7",
+    "id":7,
     "code":"p7",
     "name":"Beam Clamp",
     "type":"plain",
@@ -98,7 +98,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":30
   },
   {
-    "id":"8",
+    "id":8,
     "code":"p8",
     "name":"Beam Clamp",
     "type":"plain",
@@ -111,7 +111,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":30
   },
   {
-    "id":"9",
+    "id":9,
     "code":"p9",
     "name":"Beam Clamp",
     "type":"plain",
@@ -124,7 +124,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":30
   },
   {
-    "id":"10",
+    "id":10,
     "code":"m1",
     "name":"Boom lift 40",
     "type":"meter",
@@ -137,7 +137,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":4
   },
   {
-    "id":"12",
+    "id":11,
     "code":"m2",
     "name":"Boom lift 60",
     "type":"meter",
@@ -150,7 +150,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":4
   },
   {
-    "id":"13",
+    "id":12,
     "code":"m3",
     "name":"Boom lift 80",
     "type":"meter",
@@ -163,7 +163,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"14",
+    "id":13,
     "code":"m4",
     "name":"Boom lift 100",
     "type":"meter",
@@ -176,7 +176,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":2
   },
   {
-    "id":"15",
+    "id":14,
     "code":"m5",
     "name":"Boom lift 20",
     "type":"meter",
@@ -189,7 +189,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":1
   },
   {
-    "id":"16",
+    "id":15,
     "code":"m6",
     "name":"Boom lift 20",
     "type":"meter",
@@ -202,7 +202,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":1
   },
   {
-    "id":"17",
+    "id":16,
     "code":"m7",
     "name":"Boom lift 20",
     "type":"meter",
@@ -215,7 +215,7 @@ export const getRentalProductData = () => ([
     "minimum_rent_period":1
   },
   {
-    "id":"18",
+    "id":17,
     "code":"m8",
     "name":"Boom lift 40",
     "type":"meter",
