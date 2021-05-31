@@ -1,10 +1,11 @@
 import './App.css';
+import RentalProducts from './components/pages/products/rentalProducts';
 
 function App() {
   return (
-    <div className="App">
-     <spn>Rental Management APP </spn>
-    </div>
+    <>
+     <RentalProducts/>
+    </>
   );
 }
 
