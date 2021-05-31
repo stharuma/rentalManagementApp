@@ -36,8 +36,8 @@ const UsePagination = (records) => {
     />
   );
 
-  const recordsAfterPaging = () => {
-    return records.slice(page * rowsPerPage, (page + 1) * rowsPerPage);
+  const recordsAfterPaging = (data) => {
+    return data.slice(page * rowsPerPage, (page + 1) * rowsPerPage);
   };
 
   
