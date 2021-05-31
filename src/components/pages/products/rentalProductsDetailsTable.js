@@ -26,21 +26,21 @@ const headCells = [
   { id: "name", label: "Name" },
   { id: "code", label: "Code" },
   { id: "availability", label: "Availability" },
-  { id: "needToRepair", label: "Need To Repair" },
+  { id: "needing_repair", label: "Need To Repair" },
   { id: "durability", label: "Durability" },
   { id: "mileage", label: "Mileage" },
 ];
 
 const RentalProductsDetailsTable = ({ records }) => {
   const classes = useStyles();
-  const { TblContainer, TblHead, TblPagination, recordsAfterPaging } = UseTable(headCells, records);
+  const { TblContainer, TblHead, TblPagination, dataAfterPagingAndSorting } = UseTable(headCells, records);
 
   return (
     <>
       <TblContainer>
         <TblHead />
         <TableBody>
-          {recordsAfterPaging().map((record) => (
+          { dataAfterPagingAndSorting().map((record) => (
             <TableRow key={record.id}>
               <TableCell>{record.id}</TableCell>
               <TableCell>{record.name}</TableCell>
