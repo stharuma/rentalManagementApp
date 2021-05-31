@@ -6,6 +6,7 @@ import {
   TableCell,
 } from "@material-ui/core";
 import useStyles from "./useTableStyle";
+import UsePagination from "./usePagination";
 
 /**
 * @author Suresh Tharuma
@@ -14,7 +15,8 @@ import useStyles from "./useTableStyle";
 
 const UseTable = (headCells, records) => {
     const classes = useStyles();
-   
+    const { TblPagination, recordsAfterPaging } = UsePagination(records);
+
     const TblContainer = (props) => (
       <Table className={classes.table}>{props.children}</Table>
     );
@@ -34,6 +36,8 @@ const UseTable = (headCells, records) => {
     return {
       TblContainer,
       TblHead,
+      TblPagination, 
+      recordsAfterPaging
     };
   };
   
