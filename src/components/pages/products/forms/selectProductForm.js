@@ -57,7 +57,7 @@ const SelectedProduct = (props) => {
             renderInput={(params) => (
               <Controls.Input
                 {...params}
-                label="Available Product"
+                label={isBook ? "Select Product For Book" : "Select Product For Return"}
                 variant="outlined"
                 fullWidth
                 autoComplete="off"
