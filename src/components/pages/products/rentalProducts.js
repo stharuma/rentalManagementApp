@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as productService from "../../services/productService";
 import RentalProductsDetailsTable from "./rentalProductsDetailsTable";
+import SelectedProduct from '../products/forms/selectProductForm'
 import {
   Typography,
   Grid,
@@ -25,9 +26,11 @@ const useStyles = makeStyles((theme) => ({
 
 const RentalProducts = (props) => {
   const classes = useStyles();
-  const [records, setRecords] = useState(productService.getRentalProductData());
+  const [records, setRecords] = useState(productService.getAllProducts());
   const [openBookPopup, setOpenBookPopup] = useState(false);
   const [openReturnPopup, setOpenReturnPopup] = useState(false);
+  const [bookedProduct, setBookedProduct] = useState({});
+  const [returnProduct, setReturnProduct] = useState({});
 
   return (
     <>
@@ -76,12 +79,16 @@ const RentalProducts = (props) => {
         title="Book A Product"
         openPopup={openBookPopup}
         setOpenPopup={setOpenBookPopup}
-      ></Controls.Popup>
+      >
+         <SelectedProduct isBook={true} bookedProduct={bookedProduct} setBookedProduct={setBookedProduct}/>
+      </Controls.Popup>
       <Controls.Popup
         title="Return A Product"
         openPopup={openReturnPopup}
         setOpenPopup={setOpenReturnPopup}
-      ></Controls.Popup>
+      >
+         <SelectedProduct isBook={false} returnProduct={returnProduct} setReturnProduct={setReturnProduct}/>
+      </Controls.Popup>
     </>
   );
 };
