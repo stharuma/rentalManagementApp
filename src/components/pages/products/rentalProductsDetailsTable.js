@@ -38,6 +38,7 @@ const headCells = [
   { id: "needing_repair", label: "Need To Repair" },
   { id: "durability", label: "Durability" },
   { id: "mileage", label: "Mileage" },
+  { id: "price", label: "Price" },
 ];
 
 const RentalProductsDetailsTable = ({ records }) => {
@@ -76,7 +77,7 @@ const RentalProductsDetailsTable = ({ records }) => {
     <>
       <Toolbar>
         <Controls.Input
-          label="Search Employees"
+          label="Search Products"
           className={classes.searchInput}
           InputProps={{
             startAdornment: (
@@ -99,7 +100,8 @@ const RentalProductsDetailsTable = ({ records }) => {
               <TableCell>{record.availability.toString()}</TableCell>
               <TableCell>{record.needing_repair.toString()}</TableCell>
               <TableCell>{record.durability}</TableCell>
-              <TableCell>{record.mileage}</TableCell>
+              <TableCell>{record.mileage===null?0:record.mileage}</TableCell>
+              <TableCell>{record.price}</TableCell>
             </TableRow>
           ))}
         </TableBody>

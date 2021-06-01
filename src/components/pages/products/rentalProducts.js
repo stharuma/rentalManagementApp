@@ -18,7 +18,7 @@ console.log('records ', records)
     <Container fixed>
       <Grid item xs={12} sm={12} md={12} lg={12} align="left">
       <Typography gutterBottom variant="subtitle1" align="left" color="primary" fontWeight="fontWeightMedium">
-        Rental Products Details:
+        Products Details:
         <br />
       </Typography>
       <Divider />
