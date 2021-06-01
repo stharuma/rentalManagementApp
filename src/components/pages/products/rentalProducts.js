@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as productService from "../../services/productService";
 import RentalProductsDetailsTable from "./rentalProductsDetailsTable";
-import SelectedProduct from '../products/forms/selectProductForm'
+import SelectedProduct from "../products/forms/selectProductForm";
 import {
   Typography,
   Grid,
@@ -11,6 +11,8 @@ import {
   ButtonGroup,
 } from "@material-ui/core";
 import Controls from "../../common/Controls";
+import BookedProduct from "./forms/bookProductForm";
+import ReturnProduct from "./forms/returnProductForm";
 
 /**
  * @author
@@ -18,7 +20,7 @@ import Controls from "../../common/Controls";
  **/
 
 const useStyles = makeStyles((theme) => ({
-   newButton: {
+  newButton: {
     display: "flex",
     right: "10px",
   },
@@ -29,8 +31,6 @@ const RentalProducts = (props) => {
   const [records, setRecords] = useState(productService.getAllProducts());
   const [openBookPopup, setOpenBookPopup] = useState(false);
   const [openReturnPopup, setOpenReturnPopup] = useState(false);
-  const [bookedProduct, setBookedProduct] = useState({});
-  const [returnProduct, setReturnProduct] = useState({});
 
   return (
     <>
@@ -80,14 +80,14 @@ const RentalProducts = (props) => {
         openPopup={openBookPopup}
         setOpenPopup={setOpenBookPopup}
       >
-         <SelectedProduct isBook={true} bookedProduct={bookedProduct} setBookedProduct={setBookedProduct}/>
+        <BookedProduct />
       </Controls.Popup>
       <Controls.Popup
         title="Return A Product"
         openPopup={openReturnPopup}
         setOpenPopup={setOpenReturnPopup}
       >
-         <SelectedProduct isBook={false} returnProduct={returnProduct} setReturnProduct={setReturnProduct}/>
+        <ReturnProduct />
       </Controls.Popup>
     </>
   );
