@@ -9,7 +9,7 @@ import UseSort from "./useSort";
  * @function UseTable
  **/
 
-const UseTable = (headCells, records) => {
+const UseTable = (headCells, records, filterFn) => {
   const classes = useStyles();
   const [order, setOrder] = useState();
   const [orderBy, setOrderBy] = useState();
@@ -18,7 +18,7 @@ const UseTable = (headCells, records) => {
   const { stableSort, getComparator } = UseSort();
 
   const dataAfterPagingAndSorting =() => recordsAfterPaging(
-    stableSort(records, getComparator(order, orderBy))
+    stableSort(filterFn.fn(records), getComparator(order, orderBy))
   );
 
   const TblContainer = (props) => (

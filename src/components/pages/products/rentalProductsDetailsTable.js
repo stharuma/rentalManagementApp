@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import UseTable from "../../tables/useTable";
-import { TableBody, TableRow, TableCell, makeStyles } from "@material-ui/core";
+import {
+  TableBody,
+  TableRow,
+  TableCell,
+  makeStyles,
+  Toolbar,
+  InputAdornment,
+} from "@material-ui/core";
+import Controls from "../../common/Controls";
+import { Search } from "@material-ui/icons";
 
 /**
  * @author Suresh Tharuma
@@ -33,14 +42,56 @@ const headCells = [
 
 const RentalProductsDetailsTable = ({ records }) => {
   const classes = useStyles();
-  const { TblContainer, TblHead, TblPagination, dataAfterPagingAndSorting } = UseTable(headCells, records);
+  const [filterFn, setFilterFn] = useState({
+    fn: (items) => {
+      return items;
+    },
+  });
+  const {
+    TblContainer,
+    TblHead,
+    TblPagination,
+    dataAfterPagingAndSorting,
+  } = UseTable(headCells, records, filterFn);
+
+  const handleSearchRequest = (e) => {
+    e.preventDefault();
+    let target = e.target;
+    setFilterFn({
+      fn: (items) => {
+        if (target.value == "") return items;
+        else
+          return items.filter(
+            (x) =>
+              x.name.toLowerCase().includes(target.value) ||
+              x.code.toLowerCase().includes(target.value) ||
+              x.durability == target.value ||
+              x.mileage == target.value
+          );
+      },
+    });
+  };
 
   return (
     <>
+      <Toolbar>
+        <Controls.Input
+          label="Search Employees"
+          className={classes.searchInput}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            ),
+          }}
+          onChange={handleSearchRequest}
+        />
+      </Toolbar>
       <TblContainer>
         <TblHead />
         <TableBody>
-          { dataAfterPagingAndSorting().map((record) => (
+          {dataAfterPagingAndSorting().map((record) => (
             <TableRow key={record.id}>
               <TableCell>{record.id}</TableCell>
               <TableCell>{record.name}</TableCell>
