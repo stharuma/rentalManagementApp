@@ -1,230 +1,275 @@
-import React from 'react'
+import React from "react";
 
 /**
-* @author Suresh Tharuma
-* @function ProductService
-**/
+ * @author Suresh Tharuma
+ * @function ProductService
+ **/
 
-export const getRentalProductData = () => ([
+export const getRentalProductData = () => [
   {
-    "id":1,
-    "code":"p1",
-    "name":"Air Compressor 12 GAS",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":3000,
-    "max_durability":3000,
-    "mileage":null,
-    "price": 4500,
-    "minimum_rent_period":1
+    code: "p1",
+    name: "Air Compressor 12 GAS",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 3000,
+    max_durability: 3000,
+    mileage: null,
+    price: 4500,
+    minimum_rent_period: 1,
   },
   {
-    "id":2,
-    "code":"p2",
-    "name":"Air Compressor 5 Electric",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":1500,
-    "max_durability":2000,
-    "mileage":null,
-    "price": 6500,
-    "minimum_rent_period":1
+    code: "p2",
+    name: "Air Compressor 5 Electric",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 1500,
+    max_durability: 2000,
+    mileage: null,
+    price: 6500,
+    minimum_rent_period: 1,
   },
   {
-    "id":3,
-    "code":"p3",
-    "name":"Dia Blade 14 inch",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":40000,
-    "max_durability":50000,
-    "mileage":null,
-    "price": 3000,
-    "minimum_rent_period":2
+    code: "p3",
+    name: "Dia Blade 14 inch",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 40000,
+    max_durability: 50000,
+    mileage: null,
+    price: 3000,
+    minimum_rent_period: 2,
   },
   {
-    "id":4,
-    "code":"p4",
-    "name":"Copper Blade 5 inch",
-    "type":"plain",
-    "availability":false,
-    "needing_repair":true,
-    "durability":0,
-    "max_durability":2000,
-    "mileage":null,
-    "price": 200,
-    "minimum_rent_period":2
+    code: "p4",
+    name: "Copper Blade 5 inch",
+    type: "plain",
+    availability: false,
+    needing_repair: true,
+    durability: 0,
+    max_durability: 2000,
+    mileage: null,
+    price: 200,
+    minimum_rent_period: 2,
   },
   {
-    "id":5,
-    "code":"p5",
-    "name":"Copper Blade 5 inch",
-    "type":"plain",
-    "availability":false,
-    "needing_repair":true,
-    "durability":0,
-    "max_durability":2000,
-    "mileage":null,
-    "price": 200,
-    "minimum_rent_period":2
+    code: "p5",
+    name: "Copper Blade 5 inch",
+    type: "plain",
+    availability: false,
+    needing_repair: true,
+    durability: 0,
+    max_durability: 2000,
+    mileage: null,
+    price: 200,
+    minimum_rent_period: 2,
   },
   {
-    "id":6,
-    "code":"p6",
-    "name":"Copper Blade 8 inch",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":1500,
-    "max_durability":2000,
-    "mileage":null,
-    "price": 300,
-    "minimum_rent_period":2
+    code: "p6",
+    name: "Copper Blade 8 inch",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 1500,
+    max_durability: 2000,
+    mileage: null,
+    price: 300,
+    minimum_rent_period: 2,
   },
   {
-    "id":7,
-    "code":"p7",
-    "name":"Beam Clamp",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":15000,
-    "max_durability":20000,
-    "mileage":null,
-    "price": 800,
-    "minimum_rent_period":30
+    code: "p7",
+    name: "Beam Clamp",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 15000,
+    max_durability: 20000,
+    mileage: null,
+    price: 800,
+    minimum_rent_period: 30,
   },
   {
-    "id":8,
-    "code":"p8",
-    "name":"Beam Clamp",
-    "type":"plain",
-    "availability":true,
-    "needing_repair":false,
-    "durability":10000,
-    "max_durability":20000,
-    "mileage":null,
-    "price": 800,
-    "minimum_rent_period":30
+    code: "p8",
+    name: "Beam Clamp",
+    type: "plain",
+    availability: true,
+    needing_repair: false,
+    durability: 10000,
+    max_durability: 20000,
+    mileage: null,
+    price: 800,
+    minimum_rent_period: 30,
   },
   {
-    "id":9,
-    "code":"p9",
-    "name":"Beam Clamp",
-    "type":"plain",
-    "availability":false,
-    "needing_repair":false,
-    "durability":5000,
-    "max_durability":20000,
-    "mileage":null,
-    "price": 800,
-    "minimum_rent_period":30
+    code: "p9",
+    name: "Beam Clamp",
+    type: "plain",
+    availability: false,
+    needing_repair: false,
+    durability: 5000,
+    max_durability: 20000,
+    mileage: null,
+    price: 800,
+    minimum_rent_period: 30,
   },
   {
-    "id":10,
-    "code":"m1",
-    "name":"Boom lift 40",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":4000,
-    "max_durability":8000,
-    "mileage":10000,
-    "price": 1000,
-    "minimum_rent_period":4
+    code: "m1",
+    name: "Boom lift 40",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 4000,
+    max_durability: 8000,
+    mileage: 10000,
+    price: 1000,
+    minimum_rent_period: 4,
   },
   {
-    "id":11,
-    "code":"m2",
-    "name":"Boom lift 60",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":8000,
-    "max_durability":10000,
-    "mileage":5000,
-    "price": 1500,
-    "minimum_rent_period":4
+    code: "m2",
+    name: "Boom lift 60",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 8000,
+    max_durability: 10000,
+    mileage: 5000,
+    price: 1500,
+    minimum_rent_period: 4,
   },
   {
-    "id":12,
-    "code":"m3",
-    "name":"Boom lift 80",
-    "type":"meter",
-    "availability":false,
-    "needing_repair":true,
-    "durability":500,
-    "max_durability":12000,
-    "mileage":200,
-    "price": 2000,
-    "minimum_rent_period":2
+    code: "m3",
+    name: "Boom lift 80",
+    type: "meter",
+    availability: false,
+    needing_repair: true,
+    durability: 500,
+    max_durability: 12000,
+    mileage: 200,
+    price: 2000,
+    minimum_rent_period: 2,
   },
   {
-    "id":13,
-    "code":"m4",
-    "name":"Boom lift 100",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":4000,
-    "max_durability":12000,
-    "mileage":8500,
-    "price": 2500,
-    "minimum_rent_period":2
+    code: "m4",
+    name: "Boom lift 100",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 4000,
+    max_durability: 12000,
+    mileage: 8500,
+    price: 2500,
+    minimum_rent_period: 2,
   },
   {
-    "id":14,
-    "code":"m5",
-    "name":"Boom lift 20",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":1200,
-    "max_durability":8000,
-    "mileage":600,
-    "price": 500,
-    "minimum_rent_period":1
+    code: "m5",
+    name: "Boom lift 20",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 1200,
+    max_durability: 8000,
+    mileage: 600,
+    price: 500,
+    minimum_rent_period: 1,
   },
   {
-    "id":15,
-    "code":"m6",
-    "name":"Boom lift 20",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":8000,
-    "max_durability":8000,
-    "mileage":0,
-    "price": 500,
-    "minimum_rent_period":1
+    code: "m6",
+    name: "Boom lift 20",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 8000,
+    max_durability: 8000,
+    mileage: 0,
+    price: 500,
+    minimum_rent_period: 1,
   },
   {
-    "id":16,
-    "code":"m7",
-    "name":"Boom lift 20",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":5000,
-    "max_durability":8000,
-    "mileage":1200,
-    "price": 500,
-    "minimum_rent_period":1
+    code: "m7",
+    name: "Boom lift 20",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 5000,
+    max_durability: 8000,
+    mileage: 1200,
+    price: 500,
+    minimum_rent_period: 1,
   },
   {
-    "id":17,
-    "code":"m8",
-    "name":"Boom lift 40",
-    "type":"meter",
-    "availability":true,
-    "needing_repair":false,
-    "durability":8000,
-    "max_durability":10000,
-    "mileage":2500,
-    "price": 1000,
-    "minimum_rent_period":2
-  }
-])
+    code: "m8",
+    name: "Boom lift 40",
+    type: "meter",
+    availability: true,
+    needing_repair: false,
+    durability: 8000,
+    max_durability: 10000,
+    mileage: 2500,
+    price: 1000,
+    minimum_rent_period: 2,
+  },
+];
+
+const KEYS = {
+  products: "products",
+  productId: "productId",
+};
+
+export function generateProductId() {
+  if (localStorage.getItem(KEYS.productId) == null)
+    localStorage.setItem(KEYS.productId, "0");
+  var id = parseInt(localStorage.getItem(KEYS.productId));
+  localStorage.setItem(KEYS.productId, (++id).toString());
+  return id;
+}
+
+export function getAllProducts() {
+  if (localStorage.getItem(KEYS.products) == null)
+    localStorage.setItem(KEYS.products, JSON.stringify([]));
+  return JSON.parse(localStorage.getItem(KEYS.products));
+}
+
+export function getAllAvailableProducts() {
+   return getAllProducts().filter(data => data.availability);
+}
+
+export function getAllNotAvailableProducts() {
+  return getAllProducts().filter(data => !data.availability);
+}
+
+export function insertProduct(data) {
+  let products = getAllProducts();
+  data["id"] = generateProductId();
+  products.push(data);
+  localStorage.setItem(KEYS.products, JSON.stringify(products));
+}
+
+export function updateProduct(data) {
+  let products = getAllProducts();
+  let recordIndex = products.findIndex((x) => x.id == data.id);
+  products[recordIndex] = { ...data };
+  localStorage.setItem(KEYS.products, JSON.stringify(products));
+}
+
+export function deleteProduct(id) {
+  let products = getAllProducts();
+  products = products.filter((x) => x.id != id);
+  localStorage.setItem(KEYS.products, JSON.stringify(products));
+}
+
+(function addProductsToLocalStorage() {
+  localStorage.setItem(KEYS.productId, '0');
+  deleteAllProducts();
+  let products = getAllProducts();
+  getRentalProductData().map((data) => {
+    data["id"] = generateProductId();
+    products.push(data);
+  });
+  localStorage.setItem(KEYS.products, JSON.stringify(products));
+})();
+
+export function deleteAllProducts() {
+  localStorage.setItem(KEYS.products, JSON.stringify([]));
+}
