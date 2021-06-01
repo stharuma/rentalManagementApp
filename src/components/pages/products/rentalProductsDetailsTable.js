@@ -95,7 +95,7 @@ const RentalProductsDetailsTable = ({ records }) => {
               <TableCell>{record.code}</TableCell>
               <TableCell>{record.availability.toString()}</TableCell>
               <TableCell>{record.needing_repair.toString()}</TableCell>
-              <TableCell>{record.durability}</TableCell>
+              <TableCell>{`${record.durability}/${record.max_durability}`}</TableCell>
               <TableCell>{record.mileage===null?0:record.mileage}</TableCell>
               <TableCell>{record.price}</TableCell>
             </TableRow>
