@@ -17,14 +17,7 @@ import Controls from "../../common/Controls";
  **/
 
 const useStyles = makeStyles((theme) => ({
-  pageContent: {
-    margin: theme.spacing(5),
-    padding: theme.spacing(3),
-  },
-  searchInput: {
-    width: "75%",
-  },
-  newButton: {
+   newButton: {
     display: "flex",
     right: "10px",
   },
