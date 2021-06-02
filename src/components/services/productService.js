@@ -235,6 +235,10 @@ export function getAllAvailableProducts() {
    return getAllProducts().filter(data => data.availability);
 }
 
+export function getAllRentedProducts() {
+  return getAllProducts().filter(data => data.hasRent);
+}
+
 export function getAllNotAvailableProducts() {
   return getAllProducts().filter(data => !data.availability);
 }
@@ -259,7 +263,7 @@ export function deleteProduct(id) {
   localStorage.setItem(KEYS.products, JSON.stringify(products));
 }
 
-(function addProductsToLocalStorage() {
+export function addProductsToLocalStorage() {
   localStorage.setItem(KEYS.productId, '0');
   deleteAllProducts();
   let products = getAllProducts();
@@ -268,7 +272,7 @@ export function deleteProduct(id) {
     products.push(data);
   });
   localStorage.setItem(KEYS.products, JSON.stringify(products));
-})();
+};
 
 export function deleteAllProducts() {
   localStorage.setItem(KEYS.products, JSON.stringify([]));
