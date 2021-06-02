@@ -22,7 +22,7 @@ const ReturnProduct = (props) => {
 
   const handleReturning = () => {
     console.log('returnedProduct11 ',returnedProduct)
-     let diffDays = getDifferenceInDays(new Date(returnedProduct.fromDate), new Date(returnedProduct.toDate));
+     let diffDays = getDifferenceInDays(new Date(returnedProduct.fromDate), new Date());
      console.log('diffDays ',diffDays)
      setReturnedProduct({
       ...returnedProduct,
