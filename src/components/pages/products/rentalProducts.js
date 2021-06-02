@@ -31,10 +31,15 @@ const useStyles = makeStyles((theme) => ({
 const RentalProducts = (props) => {
   const classes = useStyles();
   const [records, setRecords] = useState([]);
-  const [recordForEdit, setRecordForEdit] = useState(null)
+  const [recordForEdit, setRecordForEdit] = useState(null);
   const [openBookPopup, setOpenBookPopup] = useState(false);
   const [openReturnPopup, setOpenReturnPopup] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: "",
+    type: "",
+  });
 
   useEffect(() => {
     productService.addProductsToLocalStorage();
@@ -42,8 +47,21 @@ const RentalProducts = (props) => {
   }, []);
 
   const addOrEdit = (product, resetForm) => {
-    if (product.id == null) productService.insertProduct(product);
-    else productService.updateProduct(product);
+    if (product.id == null) {
+      productService.insertProduct(product);
+      setNotify({
+        isOpen: true,
+        message: 'Successfully Created',
+        type: 'success'
+    })
+    } else {
+      productService.updateProduct(product);
+      setNotify({
+        isOpen: true,
+        message: 'Successfully Updated',
+        type: 'success'
+    })
+    }
     resetForm();
     setRecordForEdit(null);
     setOpenPopup(false);
@@ -55,7 +73,7 @@ const RentalProducts = (props) => {
     setOpenPopup(true);
   };
 
-   return (
+  return (
     <>
       <Container fixed>
         <Grid container justify="left" spacing={2}>
@@ -72,7 +90,11 @@ const RentalProducts = (props) => {
             </Typography>
 
             <Divider />
-            <RentalProductsDetailsTable records={records} setRecords={setRecords} openInPopup={openInPopup}/>
+            <RentalProductsDetailsTable
+              records={records}
+              setRecords={setRecords}
+              openInPopup={openInPopup}
+            />
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6} align="left">
             <Controls.Button
@@ -136,8 +158,9 @@ const RentalProducts = (props) => {
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >
-        <ProductForm recordForEdit={recordForEdit} addOrEdit={addOrEdit}  />
+        <ProductForm recordForEdit={recordForEdit} addOrEdit={addOrEdit} />
       </Controls.Popup>
+      <Controls.Notification notify={notify} setNotify={setNotify} />
     </>
   );
 };
