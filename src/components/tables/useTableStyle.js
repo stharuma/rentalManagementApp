@@ -9,17 +9,17 @@ export default makeStyles((theme) => ({
             color: theme.palette.primary.main,
             backgroundColor: theme.palette.primary.contrastText,
             textAlign: "center",
-            verticalAlign: 'top'
-            // height:'20px',
-            // padding: "0px"
+            verticalAlign: 'top',
+            height:'20px',
+            padding: "0px"
         },
         '& tbody td': {
             fontWeight: '300',
             fontSize: 12,
             textAlign: "center",
-            verticalAlign: 'top'
-            // height:'20px',
-            // padding: "0px"
+            verticalAlign: 'top',
+            height:'20px',
+            padding: "0px"
         },
         '& tbody tr:hover': {
             backgroundColor: '#CEE3F6',

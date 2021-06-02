@@ -12,7 +12,7 @@ export function useForm(initialFValues, validateOnChange = false, validate) {
             [name]: value
         })
         if (validateOnChange)
-            if(validate)validate({ [name]: value })
+            if(validate) validate({ [name]: value })
     }
 
     const resetForm = () => {
