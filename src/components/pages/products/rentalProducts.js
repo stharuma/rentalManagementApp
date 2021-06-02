@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as productService from "../../services/productService";
 import RentalProductsDetailsTable from "./rentalProductsDetailsTable";
 import SelectedProduct from "../products/forms/selectProductForm";
@@ -28,9 +28,14 @@ const useStyles = makeStyles((theme) => ({
 
 const RentalProducts = (props) => {
   const classes = useStyles();
-  const [records, setRecords] = useState(productService.getAllProducts());
+  const [records, setRecords] = useState([]);
   const [openBookPopup, setOpenBookPopup] = useState(false);
   const [openReturnPopup, setOpenReturnPopup] = useState(false);
+
+  useEffect(() => {
+    productService.addProductsToLocalStorage();
+    setRecords(productService.getAllProducts());
+  }, []);
 
   return (
     <>
@@ -80,14 +85,14 @@ const RentalProducts = (props) => {
         openPopup={openBookPopup}
         setOpenPopup={setOpenBookPopup}
       >
-        <BookedProduct />
+        <BookedProduct  setOpenPopup={setOpenBookPopup} setRecords={setRecords}/>
       </Controls.Popup>
       <Controls.Popup
         title="Return A Product"
         openPopup={openReturnPopup}
         setOpenPopup={setOpenReturnPopup}
       >
-        <ReturnProduct />
+        <ReturnProduct setOpenPopup={setOpenReturnPopup} setRecords={setRecords}/>
       </Controls.Popup>
     </>
   );
